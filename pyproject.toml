@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "poetry-issue"
+version = "0.0.1"
+description = "Illustration for a dependency installation issue"
+authors = ["Antoine Eudes <antoine.eudes@sicara.com>"]
+
+[tool.poetry.dependencies]
+python = "3.8.2"
+bar = {git = "ssh://git@gitlab.com/xxx/foo.git", develop = true, tag = "v0.13.1"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
